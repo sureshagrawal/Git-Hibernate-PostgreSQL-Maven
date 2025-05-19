@@ -29,6 +29,8 @@ public class Main {
 
 
 //        step - 3 : Execute Query -- Insert data
+//        persist()/save() : it will execute INSERT query
+
 //        Student student = new Student();
 //        student.setRoll(555);
 //        student.setName("siddhesh");
@@ -40,6 +42,8 @@ public class Main {
 
 
 //        step - 3 : Execute Query -- Select data and print data
+//        find()/get()/byId() : It will execute SELECT query
+
 //        eager fetching : query will get executed whether we use it or not after fetching
 //        Student student = session.find(Student.class,111); //earlier in version 6, method was get()
 //        System.out.println(student);
@@ -55,12 +59,25 @@ public class Main {
 
 
 //        step - 3 : Execute Query -- Update data
-        Student student = new Student();
-        student.setRoll(555);
-        student.setName("siddhesh");
-        student.setMks(70.00f);
+//        merge() : it will execute UPDATE/INSERT query
+//        merge() : it will always first search whether record is present or absent, if present then update record and if absent then insert new record
+
+//        Student student = new Student();
+//        student.setRoll(666);
+//        student.setName("kiran");
+//        student.setMks(70.00f);
+//        Transaction transaction = session.beginTransaction();
+//        session.merge(student); //if related data is present then update record otherwise insert record
+//        transaction.commit();
+
+
+
+//        step - 3 : Execute Query -- Delete data
+//        remove() : it will execute DELETE query
+//        before remove, first retrieve object by using find()
         Transaction transaction = session.beginTransaction();
-        session.merge(student);
+        Student student = session.find(Student.class,222);
+        session.remove(student);
         transaction.commit();
 
 
