@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 public class Student {
     @Id
     private int roll;
+
     private String name;
     private float mks;
 
