@@ -1,18 +1,14 @@
 package org.nsgacademy;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Student {
+    @Id
     private int roll;
     private String name;
     private float mks;
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "roll=" + roll +
-                ", name='" + name + '\'' +
-                ", mks=" + mks +
-                '}';
-    }
 
     public int getRoll() {
         return roll;
@@ -36,5 +32,14 @@ public class Student {
 
     public void setMks(float mks) {
         this.mks = mks;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "roll=" + roll +
+                ", name='" + name + '\'' +
+                ", mks=" + mks +
+                '}';
     }
 }
