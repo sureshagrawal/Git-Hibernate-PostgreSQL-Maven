@@ -31,13 +31,16 @@ public class Main {
 //        step - 3 : Execute Query -- Insert data
 //        persist()/save() : it will execute INSERT query
 
-//        Student student = new Student();
-//        student.setRoll(555);
-//        student.setName("siddhesh");
-//        student.setMks(99.99f);
-//        Transaction transaction = session.beginTransaction();
-//        session.persist(student); //earlier in version 6, method was save()
-//        transaction.commit();
+        Student student = new Student();
+        student.setRoll(22);
+        student.setName("siddhesh");
+        student.setMks(99.99f);
+        Transaction transaction = session.beginTransaction();
+        session.persist(student); //earlier in version 6, method was save()
+        transaction.commit();
+
+
+
 
 
 
@@ -75,10 +78,10 @@ public class Main {
 //        step - 3 : Execute Query -- Delete data
 //        remove() : it will execute DELETE query
 //        before remove, first retrieve object by using find()
-        Transaction transaction = session.beginTransaction();
-        Student student = session.find(Student.class,222);
-        session.remove(student);
-        transaction.commit();
+//        Transaction transaction = session.beginTransaction();
+//        Student student = session.find(Student.class,222);
+//        session.remove(student);
+//        transaction.commit();
 
 
 
