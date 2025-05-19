@@ -12,5 +12,9 @@ public class Main {
         student.setName("om ghodekar");
         student.setMks(99.99f);
         System.out.println(student);
+
+        SessionFactory factory = null;
+        Session session = factory.openSession();
+        session.persist(student);
     }
 }
